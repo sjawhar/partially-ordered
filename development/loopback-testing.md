@@ -6,8 +6,8 @@ When it comes writing RESTful APIs, I like [Loopback](https://loopback.io/). It'
 
 I'm sure you follow the best TDD practices and have 100% code coverage on all your project, right? If so, you should be aware that what makes Loopback so great can also make it pretty easy to write code that's pretty hard to test. For example, you can use the CLI to scaffold a loopback app with models and relationships without writing any code. At that point, your repo will mostly be a collection of model-definition JSON files. Great, right?! Except... how do you test JSON files? Oh, I see a User.js file there, I'll just import it into my test and... nope, that file is used during that Loopback boot process to add logic to the model, but it is not the model itself. "How in the seven hells do I test this thing?!" you're saying. Don't worry! By being thoughtful about how we structure our app and disciplined in our testing, everything will work out.
 
-## Example: User management app with slack webhook
-* Introduce the example
+## The Example
+* User management app with slack webhook
 * Writing a slack bot without calling slack
 
 ## The Design
@@ -26,7 +26,7 @@ Let's get started by writing out our app's expected behavior, at least at a high
 * Testing relations -> Integration tests
 * Put it together: functional tests -> Supertest
 
-# The Scaffolding
+## The Scaffolding
 * Using CLI to scaffold app
 * Ditch their directory structure and use src/ and test/
     * You're probably not putting your client and server in the same repo anyway
